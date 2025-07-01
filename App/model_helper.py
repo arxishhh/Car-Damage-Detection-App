@@ -2,7 +2,6 @@ from PIL import Image
 import torch
 from torchvision import transforms,models
 from torch import nn as nn
-import time
 trained_model = None
 class_names = ['F_Breakage', 'F_Crushed', 'F_Normal', 'R_Breakage', 'R_Crushed', 'R_Normal']
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
