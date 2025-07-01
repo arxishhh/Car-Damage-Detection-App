@@ -10,7 +10,7 @@ if uploaded_file:
 if st.button('Get Prediction'):
     file = {'file':(uploaded_file.name,uploaded_file.getbuffer(),uploaded_file.type)}
 
-    response = requests.post('http://127.0.0.1:8000/predict',files = file)
+    response = requests.post('https://car-damage-detection-app-cv20.onrender.com/predict',files = file)
 
     if response.status_code == 200:
         prediction = response.json()

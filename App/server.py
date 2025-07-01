@@ -3,9 +3,9 @@ from App.model_helper import predict
 app = FastAPI()
 
 
-@app.get('/hello')
-async def hello():
-    return {'Hello World'}
+@app.get('/')
+async def root():
+    return {'Running Smooth'}
 @app.post("/predict")
 async def get_prediction(file : UploadFile = File(...)):
     try:
