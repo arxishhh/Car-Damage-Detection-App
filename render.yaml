@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: car-damage-api
+    runtime: python
+    buildCommand: |
+      apt-get update
+      apt-get install -y cmake g++ libomp-dev
+      pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: PORT
+        value: 10000
