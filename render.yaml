@@ -1,16 +1,10 @@
 services:
   - type: web
-    name: car-damage-api
+    name: fastapi-backend
     runtime: python
-    build:
-      environment:
-        pythonVersion: 3.10
-    buildCommand: |
-      apt-get update
-      apt-get install -y build-essential cmake g++ libomp-dev gfortran
-      pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt
     startCommand: ./start.sh
     envVars:
-      - key: PORT
-        value: 10000
-
+      - key: PYTHON_VERSION
+        value: 3.10
+    plan: free
