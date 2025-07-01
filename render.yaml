@@ -2,6 +2,9 @@ services:
   - type: web
     name: car-damage-api
     runtime: python
+    build:
+      environment:
+        pythonVersion: 3.10
     buildCommand: |
       apt-get update
       apt-get install -y cmake g++ libomp-dev
@@ -10,3 +13,4 @@ services:
     envVars:
       - key: PORT
         value: 10000
+
