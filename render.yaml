@@ -7,7 +7,7 @@ services:
         pythonVersion: 3.10
     buildCommand: |
       apt-get update
-      apt-get install -y cmake g++ libomp-dev
+      apt-get install -y cmake g++ libomp-dev gfortran
       pip install -r requirements.txt
     startCommand: ./start.sh
     envVars:
