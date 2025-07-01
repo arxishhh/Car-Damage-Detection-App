@@ -9,6 +9,7 @@ async def root():
 @app.post("/predict")
 async def get_prediction(file : UploadFile = File(...)):
     try:
+        print("Debugging chal rhi heavy")
         image_bytes = await file.read()
         image_path = "temp_file.jpg"
         with open(image_path, 'wb') as f:
